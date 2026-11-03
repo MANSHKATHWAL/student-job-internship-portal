@@ -1,0 +1,168 @@
+
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fc;
+    color: #243247;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+header, nav, .navbar {
+    background: #123b70;
+    color: white;
+}
+
+nav, .navbar {
+    min-height: 70px;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a, .navbar a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover, .navbar a:hover {
+    color: #ffd166 !important;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* MAIN HERO SECTION */
+.hero {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #123b70, #2878c8);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.btn, button {
+    display: inline-block;
+    background: #ffb703;
+    color: #172b4d;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover, button:hover {
+    background: #ffd166;
+    transform: translateY(-2px);
+}
+
+/* MAIN CONTENT */
+.container {
+    width: 85%;
+    max-width: 1150px;
+    margin: 45px auto;
+    text-align: center;
+}
+
+.container h2 {
+    color: #123b70;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* FEATURE CARDS */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    color: #1765a8;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #596579;
+    margin-bottom: 18px;
+}
+
+/* FOOTER */
+footer {
+    background: #123b70;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    nav, .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px 5%;
+    }
+
+    nav a, .navbar a {
+        margin-left: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        width: 92%;
+    }
+}

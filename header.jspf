@@ -1,0 +1,48 @@
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Career Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+    href="${pageContext.request.contextPath}/assets/style.css">
+</head>
+
+<body>
+
+<nav class="nav">
+
+    <a class="brand"
+    href="${pageContext.request.contextPath}/portal">
+        Career<span>Connect</span>
+    </a>
+
+    <div>
+        <a href="${pageContext.request.contextPath}/portal">
+            Home
+        </a>
+
+        <% if(session.getAttribute("userId") != null) { %>
+
+        <a href="${pageContext.request.contextPath}/portal?action=dashboard">Dashboard</a>
+
+        <a href="${pageContext.request.contextPath}/portal?action=jobs">Jobs</a>
+
+        <a href="${pageContext.request.contextPath}/portal?action=applications">Applications</a>
+
+        <a href="${pageContext.request.contextPath}/portal?action=logout">Logout</a>
+
+        <% } else { %>
+
+        <a href="${pageContext.request.contextPath}/portal?action=login">Login</a>
+
+        <a href="${pageContext.request.contextPath}/portal?action=register">Register</a>
+
+        <% } %>
+    </div>
+
+</nav>
+
+<main class="container">
